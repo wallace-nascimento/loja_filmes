@@ -65,15 +65,16 @@ ul{
 
 .positon{
   position: absolute;
-  right: 10px;
+  right: 30px;
 }
 
 .cart2{
   top:30px;
+  right: -7px;
 }
 
 .cart{
-	right: 1000px;
+	right: 0;
 }
 
 .icone{
