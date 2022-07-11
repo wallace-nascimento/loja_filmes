@@ -4,7 +4,7 @@
 		<div class="modal-2">
 			<h3>Obrigado {{this.name}}!</h3>
 			<h5>Sua compra foi finalizada com Sucesso!</h5>
-				<a href="/">Ir para loja</a>
+				<router-link :class="{active: $route.name === 'Home'}" to="/">Ir para loja</router-link>
 		</div>
 	</div>
 							
@@ -26,7 +26,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: rgb(128,128,128)
+		background: rgb(128,128,128);
 	}
 	.modal-2{
 		position: relative;
@@ -56,12 +56,10 @@
 		top: 50px;
 	}
 
-	/*@media(max-width: 630px){
-		.modal-secundary{
-			min-width: 60%;
-			color: red;
-		}
-	}*/
+	.modal-2 a:hover{
+		background-color: #1E83BC;
+	}
+
 
 	@media(max-width:  480px){
 		.modal-2{

@@ -184,7 +184,7 @@
 	.box{
 		max-width: 600px;
 		margin: 0 auto;
-		padding-top: 10%;
+		padding-top: 100px;
 
 	}
 	.form-person{
@@ -280,7 +280,7 @@
 			flex-direction: column;
 			padding: 0 1%;
 		}
-		.cep-rua .cep{
+		.rua, .cep, .cidade, .estado{
 			width: 100%;
 		}
 		.email, .nome{
