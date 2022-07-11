@@ -1,10 +1,13 @@
 <template>
-	<div class="card">
+	<div class="box-card">
 		<img :src="'http://image.tmdb.org/t/p/w500/' + product.poster_path" :alt="product.title" />
 		<div class="date"><span>{{ product.release_date }}</span></div>
-		<h3>{{ product.title }}</h3>
-		<h5 class="price">Preço: R${{ product.vote_average.toFixed(2) }}</h5> <!---->
-		<p class="description">Votos: {{ product.vote_average }}</p><div class="icon"> <Star class="span"/> </div>
+		<p class="title">{{ product.title }}</p>
+		<p class="price">Preço: R${{ product.vote_average.toFixed(2) }}</p> <!---->
+		<div class="icon">
+			<p class="vote">Votos: {{ product.vote_average }}</p> 
+			<Star class="span"/> 
+		</div>
 		<p class="text-muted"> {{ product.category }} </p>
 		<button class="add" @click="addToCart()">Adicionar ao carrinho</button>
 	</div>
@@ -38,20 +41,19 @@
 
 <style lang="scss">
 	
-	.card{
-		width: 33.3%;
+	.box-card{
 		padding: 2% 0;
 		border-radius: 5px;
 		background-color: white;
-		box-shadow: 0 0 5px gray;
+		box-card-shadow: 0 0 5px gray;
 		margin: 100px 10px 0 10px;
 
-		h5.price{
+		p.price{
 			color: gray;
 		}
 
-		p.description{
-			font-size: .85rem;
+		p.vote{
+			font-size: 1rem;
 		}
 
 		p.text-muted{
@@ -61,6 +63,14 @@
 			padding: 2%;
 			background-color: #836FFF;
 			color: white;
+		}
+		.icon{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		.vote{
+			margin: 1% 1% 0 0;
 		}
 	}
 	button.view-product-button, .add{
@@ -74,8 +84,11 @@
 			cursor: pointer;
 		}	
 
+	button.view-product-button, .add:hover{
+		background-color: #1E83BC;
+	}	
 	@media(min-width: 400px){
-		.card{
+		.box-card{
 			width: 350px;
 			
 		}

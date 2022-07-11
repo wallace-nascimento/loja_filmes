@@ -105,12 +105,11 @@
 	import useVuelidate from "@vuelidate/core";
 	import Modal from "./Modal.vue"
 	import Cart from "../carts/CartItemCard.vue"
-	import Button from '../Button.vue'
 	export default{
 		props: ['product'],
 		name: "Checkout",
 		components:{
-			Modal, Cart, Button
+			Modal, Cart
 		},
 	 	data(){
 	 		return{
@@ -130,15 +129,16 @@
 	 	validations(){
 	 		return{
 	 			name:{
-	 				required
+	 				required,
+	 				minLength: minLength(6)
 	 			},
 		 		telephone:{
 		 			required,
-		 			minLength: minLength(11)
+		 			minLength: minLength(16)
 	 			},
 		 		cpf:{
 		 			required,
-		 			minLength: minLength(11)
+		 			minLength: minLength(14)
 		 		},
 		 		email:{
 		 			required,
@@ -146,16 +146,19 @@
 		 		},
 		 		cep:{
 		 			required,
-		 			minLength: minLength(8)
+		 			minLength: minLength(9)
 		 		},
 		 		address:{
-		 			required
+		 			required,
+		 			minLength: minLength(6)
 		 		},
 		 		city:{
-		 			required
+		 			required,
+		 			minLength: minLength(4)
 		 		},
 		 		state:{
-		 			required
+		 			required,
+		 			minLength: minLength(2)
 		 		}
 
 	 		}
