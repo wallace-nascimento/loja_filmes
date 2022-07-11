@@ -13,7 +13,7 @@
 
 					<tbody>
 						<img :src="'http://image.tmdb.org/t/p/w500/' + product.poster_path" :alt="product.title" class="img"/>
-						<td>{{ product.title }}</td> <td>{{ product.quantity }}</td> <td>{{ item_cost.toFixed(2) }}</td>
+						<td>{{ product.title }}</td> <td>{{ product.quantity }}</td> <td>{{ item_cost.toFixed(2) }} </td>
 						<td><button class="remove" @click="removeFromCart()">Remove</button></td>
 						
 					</tbody>
@@ -50,6 +50,7 @@
 	.flex{
 		display: flex;
 		justify-content: flex-end;
+		width: 510px;
 	}
 
 	.cart-item-card{

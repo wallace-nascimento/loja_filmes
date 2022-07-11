@@ -133,10 +133,5 @@ a{
   clear: both;
 }	
 
-@media(max-width: 495px){
-    .cart2{
-    right: 100px;
-  }
-}
 
 </style>
