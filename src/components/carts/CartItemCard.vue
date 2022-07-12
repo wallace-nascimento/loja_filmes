@@ -51,6 +51,7 @@
 		display: flex;
 		justify-content: flex-end;
 		width: 510px;
+                height: 100%;
 	}
 
 	.cart-item-card{
